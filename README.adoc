@@ -30,8 +30,20 @@ toc::[]
 
 First, launch a RHDG `7.3.latest` instance.
 
-Second, launch the client application.
+Second, configure your application in the `application.properties` file:
+[source, bash]
+----
+datagrid.cache-name=datagrid-test
+datagrid.host=localhost
+datagrid.port=11222
+datagrid.entry-size=209715200
+datagrid.number-of-iterations=250
+----
+
+Third, launch the Spring Boot client application.
 [source, bash]
 ----
 mvn clean spring-boot:run
 ----
+
+At certain iteration (#50-#90), you will see the errors on server- and client-side.
