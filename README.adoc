@@ -1,4 +1,4 @@
-= RHDG 8 - Reproducer
+= RHDG 7 - Reproducer put big objects
 Álvaro López Medina <alopezme@redhat.com>
 v1.0, 2021-02
 // Create TOC wherever needed
