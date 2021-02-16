@@ -25,6 +25,8 @@ public class Reproducer {
     private String cacheName;
     @Value("${datagrid.entry-size}")
     private int entrySize;
+    @Value("${datagrid.number-of-iterations}")
+    private int numberOfIterations;
 
     private RemoteCacheManager remoteCacheManager;
 
@@ -76,13 +78,13 @@ public class Reproducer {
 
         logger.info("\n--> Test begins <--\n");
         logger.info("Available caches: " + remoteCacheManager.getCacheNames());
-        logger.info("Content of entry #100: " + cache.get("80") + "\n");
+        logger.info("Content of entry #80: " + cache.get("80") + "\n");
 
         int iterationNumber = 0;
 
-        while (iterationNumber++ < 10) {
+        while (iterationNumber++ < numberOfIterations) {
             logger.info("Iteration " + iterationNumber);
-            logger.info("Put entry #100");
+            logger.info("Put entry #80");
             try {
                 cache.put("80", bytes);
             } catch (Exception e) {
@@ -90,6 +92,6 @@ public class Reproducer {
                 logger.error("There was an error putting the object on the remote cache", e);
             }
         }
-        logger.info("Content of entry #100: " + cache.get("80") + "\n");
+        logger.info("Content of entry #80: " + cache.get("80") + "\n");
     }
 }
