@@ -1,0 +1,404 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.5.RELEASE)
+
+2021-02-16 13:14:52,549 INFO  [main] org.springframework.boot.StartupInfoLogger: Starting HotrodTesterApplication on hat with PID 38500 (/home/alvaro/apps/700_Training/rhdg7-reproducer-big-put/target/classes started by alvaro in /home/alvaro/apps/700_Training/rhdg7-reproducer-big-put)
+2021-02-16 13:14:52,552 INFO  [main] org.springframework.boot.SpringApplication: No active profile set, falling back to default profiles: default
+2021-02-16 13:14:53,560 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8081 (http)
+2021-02-16 13:14:53,571 INFO  [main] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8081"]
+2021-02-16 13:14:53,572 INFO  [main] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2021-02-16 13:14:53,573 INFO  [main] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-02-16 13:14:53,675 INFO  [main] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2021-02-16 13:14:53,676 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1057 ms
+2021-02-16 13:14:53,889 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport: Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-16 13:14:54,082 INFO  [main] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8081"]
+2021-02-16 13:14:54,104 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8081 (http) with context path ''
+2021-02-16 13:14:54,111 INFO  [main] org.springframework.boot.StartupInfoLogger: Started HotrodTesterApplication in 2.134 seconds (JVM running for 2.57)
+2021-02-16 13:14:54,137 DEBUG [main] org.infinispan.commons.util.Features: Feature org.infinispan.feature.data-segmentation=false
+2021-02-16 13:14:54,138 DEBUG [main] org.infinispan.commons.util.Features: Feature org.infinispan.feature.single-port=false
+2021-02-16 13:14:54,275 DEBUG [main] org.jboss.logging.DelegatingBasicLogger: Starting remote cache manager 56dfab87
+2021-02-16 13:14:54,302 DEBUG [main] org.infinispan.client.hotrod.impl.async.DefaultAsyncExecutorFactory: Creating executor HotRod-client-async-pool-1
+2021-02-16 13:14:54,376 DEBUG [main] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: Statically configured servers: [localhost:11222]
+2021-02-16 13:14:54,376 DEBUG [main] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: Tcp no delay = true; client socket timeout = 60000 ms; connect timeout = 60000 ms
+2021-02-16 13:14:54,380 DEBUG [main] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: Creating new channel pool for localhost:11222
+2021-02-16 13:14:54,501 INFO  [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004006: Server sent new topology view (id=1, age=0) containing 1 addresses: [127.0.0.1:11222]
+2021-02-16 13:14:54,502 INFO  [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: ISPN004014: New server added(127.0.0.1:11222), adding to the pool.
+2021-02-16 13:14:54,502 DEBUG [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: Creating new channel pool for 127.0.0.1:11222
+2021-02-16 13:14:54,537 INFO  [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: ISPN004016: Server not in cluster anymore(localhost:11222), removing from the pool.
+2021-02-16 13:14:54,558 DEBUG [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.transport.netty.ChannelPool: Closing [id: 0x1a8ebf53, L:/127.0.0.1:33088 - R:localhost/127.0.0.1:11222] due to termination
+2021-02-16 13:14:54,599 INFO  [main] org.infinispan.client.hotrod.RemoteCacheManager: ISPN004021: Infinispan version: 9.4.21.Final-redhat-00002
+2021-02-16 13:14:54,621 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Available caches: [grene.summary, default, ___protobuf_metadata, bigcache, datagrid-test, repl, ___script_cache]
+2021-02-16 13:14:54,648 DEBUG [main] org.infinispan.client.hotrod.impl.RemoteCacheImpl: Start called, nothing to do here(datagrid-test)
+2021-02-16 13:14:54,656 INFO  [HotRod-client-async-pool-1-2] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004006: Server sent new topology view (id=1, age=0) containing 1 addresses: [127.0.0.1:11222]
+2021-02-16 13:14:54,657 DEBUG [HotRod-client-async-pool-1-2] org.infinispan.client.hotrod.impl.transport.netty.ChannelFactory: Same list of servers, not changing the pool
+2021-02-16 13:14:54,657 DEBUG [main] org.infinispan.client.hotrod.impl.RemoteCacheImpl: Start called, nothing to do here(datagrid-test)
+2021-02-16 13:14:54,657 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: 
+--> Test begins <--
+
+2021-02-16 13:14:54,661 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Available caches: [grene.summary, default, ___protobuf_metadata, bigcache, datagrid-test, repl, ___script_cache]
+2021-02-16 13:14:59,184 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Content of entry #100: [B@1a8b81e8
+
+2021-02-16 13:14:59,185 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 1
+2021-02-16 13:14:59,185 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:03,621 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 2
+2021-02-16 13:15:03,622 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:07,879 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 3
+2021-02-16 13:15:07,880 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:12,314 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 4
+2021-02-16 13:15:12,315 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:16,823 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 5
+2021-02-16 13:15:16,824 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:22,861 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 6
+2021-02-16 13:15:22,861 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:27,399 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 7
+2021-02-16 13:15:27,399 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:32,503 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 8
+2021-02-16 13:15:32,503 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:37,276 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 9
+2021-02-16 13:15:37,276 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:41,949 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 10
+2021-02-16 13:15:41,949 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:46,639 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 11
+2021-02-16 13:15:46,640 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:50,948 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 12
+2021-02-16 13:15:50,949 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:15:56,542 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 13
+2021-02-16 13:15:56,542 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:01,581 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 14
+2021-02-16 13:16:01,581 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:07,127 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 15
+2021-02-16 13:16:07,127 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:12,436 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 16
+2021-02-16 13:16:12,437 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:17,706 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 17
+2021-02-16 13:16:17,706 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:23,095 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 18
+2021-02-16 13:16:23,096 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:28,159 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 19
+2021-02-16 13:16:28,160 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:32,527 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 20
+2021-02-16 13:16:32,528 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:36,944 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 21
+2021-02-16 13:16:36,945 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:42,435 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 22
+2021-02-16 13:16:42,435 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:47,164 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 23
+2021-02-16 13:16:47,164 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:51,540 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 24
+2021-02-16 13:16:51,541 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:16:55,856 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 25
+2021-02-16 13:16:55,856 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:00,763 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 26
+2021-02-16 13:17:00,763 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:06,080 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 27
+2021-02-16 13:17:06,081 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:10,965 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 28
+2021-02-16 13:17:10,965 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:15,191 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 29
+2021-02-16 13:17:15,192 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:19,765 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 30
+2021-02-16 13:17:19,765 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:24,396 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 31
+2021-02-16 13:17:24,396 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:29,077 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 32
+2021-02-16 13:17:29,077 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:33,431 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 33
+2021-02-16 13:17:33,431 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:37,566 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 34
+2021-02-16 13:17:37,567 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:41,789 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 35
+2021-02-16 13:17:41,789 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:45,943 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 36
+2021-02-16 13:17:45,943 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:50,393 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 37
+2021-02-16 13:17:50,393 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:54,843 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 38
+2021-02-16 13:17:54,843 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:17:59,118 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 39
+2021-02-16 13:17:59,118 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:03,692 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 40
+2021-02-16 13:18:03,693 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:08,037 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 41
+2021-02-16 13:18:08,038 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:12,422 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 42
+2021-02-16 13:18:12,422 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:16,661 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 43
+2021-02-16 13:18:16,662 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:21,220 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 44
+2021-02-16 13:18:21,220 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:25,587 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 45
+2021-02-16 13:18:25,587 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:29,872 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 46
+2021-02-16 13:18:29,872 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:34,644 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 47
+2021-02-16 13:18:34,644 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:39,400 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 48
+2021-02-16 13:18:39,401 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:44,136 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 49
+2021-02-16 13:18:44,137 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:49,021 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 50
+2021-02-16 13:18:49,021 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:53,579 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 51
+2021-02-16 13:18:53,580 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:18:57,967 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 52
+2021-02-16 13:18:57,967 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:02,204 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 53
+2021-02-16 13:19:02,204 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:06,752 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 54
+2021-02-16 13:19:06,752 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:11,669 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 55
+2021-02-16 13:19:11,669 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:16,201 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 56
+2021-02-16 13:19:16,202 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:20,465 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 57
+2021-02-16 13:19:20,466 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:25,127 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 58
+2021-02-16 13:19:25,128 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:29,385 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 59
+2021-02-16 13:19:29,386 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:33,655 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 60
+2021-02-16 13:19:33,656 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:38,342 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 61
+2021-02-16 13:19:38,342 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:42,995 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 62
+2021-02-16 13:19:42,996 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:47,438 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 63
+2021-02-16 13:19:47,438 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:51,619 WARN  [HotRod-client-async-pool-1-2] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Java heap space
+2021-02-16 13:19:51,622 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Java heap space
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:19:51,623 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 64
+2021-02-16 13:19:51,623 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:54,307 WARN  [HotRod-client-async-pool-1-3] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:19:54,308 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:19:54,309 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 65
+2021-02-16 13:19:54,309 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:55,955 WARN  [HotRod-client-async-pool-1-4] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:19:55,956 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:19:55,957 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 66
+2021-02-16 13:19:55,957 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:19:58,345 WARN  [HotRod-client-async-pool-1-5] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:19:58,346 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:19:58,347 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 67
+2021-02-16 13:19:58,347 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:20:01,105 WARN  [HotRod-client-async-pool-1-6] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:20:01,106 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:20:01,108 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 68
+2021-02-16 13:20:01,108 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:20:02,763 WARN  [HotRod-client-async-pool-1-7] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:20:02,764 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:20:02,765 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 69
+2021-02-16 13:20:02,766 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:20:04,977 WARN  [HotRod-client-async-pool-1-1] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:20:04,978 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:20:04,978 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 70
+2021-02-16 13:20:04,979 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+2021-02-16 13:20:06,642 WARN  [HotRod-client-async-pool-1-8] org.infinispan.client.hotrod.impl.protocol.Codec20: ISPN004005: Error received from the server: java.lang.OutOfMemoryError: Direct buffer memory
+2021-02-16 13:20:06,644 ERROR [main] me.ignaciosanchez.hotrodtester.Reproducer: There was an error putting the object on the remote cache
+org.infinispan.client.hotrod.exceptions.HotRodClientException: java.lang.OutOfMemoryError: Direct buffer memory
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.checkForErrorsInResponseStatus(Codec20.java:340)
+	at org.infinispan.client.hotrod.impl.protocol.Codec20.readHeader(Codec20.java:177)
+	at org.infinispan.client.hotrod.impl.transport.netty.HeaderDecoder.decode(HeaderDecoder.java:138)
+	at org.infinispan.client.hotrod.impl.transport.netty.HintedReplayingDecoder.callDecode(HintedReplayingDecoder.java:98)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:792)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:475)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-02-16 13:20:06,644 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Iteration 71
+2021-02-16 13:20:06,644 INFO  [main] me.ignaciosanchez.hotrodtester.Reproducer: Put entry #100
+^C2021-02-16 13:20:45,271 INFO  [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport: Shutting down ExecutorService 'applicationTaskExecutor'
